@@ -72,7 +72,8 @@ python -m venv .venv
 
 # 3. Dựng cả 5 mùa, mỗi mùa 120 s, chạy song song 5 tiến trình + video 4 mùa nối nhau
 .venv/bin/python compose/gif_frame.py --scene cafe --all --anim 120 --t 10.5
-#    -> review/gif_style/v6_cafe/<mùa>/loop.mp4 và review/gif_style/v6_cafe/bon_mua.mp4  (~4 phút trên i5-14400)
+#    -> review/gif_style/v6_cafe/<mùa>/loop.mp4 và review/gif_style/v6_cafe/bon_mua.mp4
+#    (khoảng 5 phút trên i5-14400 16 luồng; dựng lần lượt với --jobs 1 mất khoảng 10 phút)
 
 # 4. Tổng hợp âm thanh và ghép vào video (chạy lại sau mỗi lần dựng hình)
 .venv/bin/python compose/audio_gif.py
