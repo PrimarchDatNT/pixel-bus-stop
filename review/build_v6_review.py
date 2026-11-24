@@ -162,7 +162,8 @@ page = f"""<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body><main>
 <h1>Trạm Xe Bốn Mùa · quán cà phê cạnh công viên (bản 6c)</h1>
-<p class="mut"><b>Mới nhất:</b> trong video 4 mùa, chỗ chuyển mùa không còn vỡ ô vuông nữa. Thay vào đó là một cơn gió quét từ trái sang phải trong 2 giây: mép gió gợn sóng (vẫn bậc thang pixel), vệt gió trắng, và lá / hoa của mùa mới bay theo gió (đào cho Tết, hoa giấy và lá xanh cho hè, lá xanh cho mưa, lá vàng cam cho Trung Thu, lá bàng đỏ cho Giao thừa). Tiếng gió vù chạy từ loa trái sang loa phải theo mép gió. Mùa mới chạy tiếp đúng từ giây đang dở, không bị giật lùi như trước.</p>
+<p class="mut"><b>Mới nhất:</b> easter egg. Trong cảnh hè, cứ 2 phút có một chuyến là xe buýt iKame thay cho xe 32: thân kem sọc cam vàng, đuôi xe dán linh vật iKame (mặt cười ^^), biển tuyến 35 (API 35), robot Android ngồi trong xe vẫy tay khi xe đỗ. Video 4 mùa có đúng chuyến này. Không có chữ nào.</p>
+<p class="mut">Đợt trước: chuyển mùa bằng cơn gió thay cho vỡ ô vuông, kèm tiếng gió.</p>
 <p class="mut">Đợt trước: mây vẽ lại theo ảnh mẫu (chùm bông pixel), mây trôi chậm, nền trời gradient.</p>
 <p class="mut">Đợt trước: mây mềm vẽ ở 1920×1080. Bản đó vẫn giữ, đổi lại chỉ cần một dòng (xem phần so sánh bên dưới).</p>
 <p class="mut">Đợt này: thêm âm thanh. Nhạc lofi 80 BPM (đàn điện Rhodes, bass, trống nhẹ, tiếng đĩa than lạo xạo)

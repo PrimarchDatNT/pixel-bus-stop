@@ -165,7 +165,7 @@ các file trong `assets/out_gif/`.
 | `actors_b/chars.py` | người đi bộ đội nón lá, học sinh, cô chờ xe, chủ quán, ông uống trà... |
 | `actors_b/cat_black.py` | mèo mun ngồi trên mái trạm (cảnh nhà phố) |
 | `actors_b/props.py` | chim sẻ, bồ câu, góc trà đá, ghế nhựa, hơi nước |
-| `actors_b/bus.py` | xe buýt 32, khói xe |
+| `actors_b/bus.py` | xe buýt 32, khói xe, xe buýt iKame (easter egg) |
 | `season/tet.py` | đèn lồng, cờ, cây quất, xe máy chở đào, chim én, cánh đào |
 | `season/thu.py` | đèn ông sao, đội múa lân, trẻ em rước đèn, lá vàng |
 | `season/skies.py` | trời pixel cũ của từng mùa + trăng rằm (dùng trong trời mới) |
@@ -185,6 +185,9 @@ Các thư mục `assets/src_gif/env`, `shelter`, `actors` (không có `_b`) là 
   đèn đường), `glows`, và `fx` (mưa, sương, sao, pháo hoa). Cảnh công viên ghi đè thêm qua `PARK` và `season_for()`.
 - **Vật chuyển động**: xe buýt, xe đạp hoa, người đi bộ, chim, đội múa lân... nằm trong `draw_movers()`. Mỗi thứ có chu kỳ
   chia hết cho 24 s.
+- **Easter egg**: trong clip mùa hè, một trong năm chuyến xe (`EASTER_BUS`, đúng chuyến lọt vào video 4 mùa) là xe
+  buýt iKame: thân kem sọc cam vàng, đuôi xe dán linh vật iKame, biển tuyến 35 (API 35), robot Android ngồi trong
+  xe vẫy tay khi xe đỗ.
 - **Kịch bản theo thời gian**: `TIMELINES`, ví dụ mèo mun ngủ → ngẩng đầu khi xe tới → nhìn theo xe đi → ngủ lại.
 - **Bầu trời** (`compose/sky_soft.py`):
   - Gradient theo `SKY_GRAD` trong `seasons.py`, quầng trăng theo `MOON_GLOW`.
@@ -240,6 +243,13 @@ PLAN.md, SPEC*.md, STYLE*.md   kế hoạch, đặc tả, ghi chú phong cách q
 | 4–5 | phong cách "GIF" pastel 384×216, vẽ tay hoàn toàn; cảnh nhà phố Hà Nội + trạm xe + hoa giấy, 5 mùa |
 | 6 | đổi nhà phố thành quán cà phê cạnh công viên; mèo mun nằm ghế chờ, mèo mướp trong quán, xe đạp hoa, xe buýt mới, âm thanh |
 | 6c | trời gradient, mây pixel kiểu chùm bông trôi chậm (clip 2 phút), dựng song song, chuyển mùa bằng cơn gió |
+
+## Ghi nguồn
+
+- Robot Android trên xe buýt easter egg: *The Android robot is reproduced or modified from work created and shared by
+  Google and used according to terms described in the Creative Commons 3.0 Attribution License.*
+- Linh vật iKame được vẽ lại bằng pixel, thuộc về iKame.
+- Ảnh tham khảo phong cách: pixel art trên Pinterest, kiểu mây từ OpenGameArt, kiểu xe buýt từ itch.io.
 
 ## Không có trong repo
 

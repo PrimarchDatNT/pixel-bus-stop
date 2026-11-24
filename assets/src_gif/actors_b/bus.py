@@ -124,6 +124,90 @@ def _clear_below(im, y):
             px[xx, yy] = (0, 0, 0, 0)
 
 
+# ------------------------------------------------------------------------------------------- easter egg: iKame bus
+# The client works as an Android dev at iKame. Once per 2-minute summer clip a different bus pulls in: cream body with
+# an orange -> yellow stripe in the mascot's colours, the rear window wrapped like an ad with the iKame mascot (round
+# orange-yellow comet with a white visor face and closed happy eyes ^^, facing the front of the bus, tail streaming
+# back), route "35" (API 35) on the destination board, and the Android robot riding inside, waving while the bus idles.
+# No text / wordmark (client's choice: mascot only). The Android robot is used under CC BY 3.0 (credit in README).
+IKAME_RECOLOR = {"yl_l": "white", "yl": "wc_l", "yl_d": "wc", "red": "or", "red_l": "or_l", "red_d": "or_d"}
+DIGITS = {"3": ["xxx", "..x", "xxx", "..x", "xxx"], "5": ["xxx", "x..", "xxx", "..x", "xxx"]}
+MASCOT = [                      # 17 x 14, faces LEFT; Y yl_l, y yl, o or_l, O or, D or_d, W white, w grey_hl, k ink
+    ".....YYYYY.......",
+    "...YYYYYYYYY.YY..",
+    "..YYYyyyyyyYYYYYY",
+    ".yyWWWWWWWyyyyyy.",
+    ".yWWkWWWkWWWyyyyy",
+    "yyWkWkWkWkWWyoooo",
+    "yoWWWWWWWWWWoooo.",
+    "ooWWWWWWWWWwooO..",
+    "oooWwwwwwwwoooOO.",
+    "OoooooooooooOOO..",
+    ".OOoooooooOOOO...",
+    "..OOOOOOOOOOD....",
+    "....DOOOODD......",
+    ".................",
+]
+MASCOT_COL = {"Y": "yl_l", "y": "yl", "o": "or_l", "O": "or", "D": "or_d", "W": "white", "w": "grey_hl", "k": "ink"}
+DROID_HEAD = ["k.....k",    # antennae
+              ".k...k.",
+              "..ggg..",
+              ".ggggg.",
+              "gwgggwg",
+              "ggggggd"]
+DROID_COL = {"g": "droid", "d": "droid_d", "w": "white", "k": "droid_d"}
+
+
+def ikame_body(dy=0, wave=False):
+    im = body(dy)
+    # NB: inside body() the headlight loop re-binds `dy` (for j, (dy, dx) ...), so everything body() draws after the
+    # headlights sits 4 px lower than its coordinates say. That is the approved look of bus 32, so the overlays
+    # below follow the same offset: Yf for the destination board (drawn before the loop), Y for the side.
+    Yf = lambda v: v + dy                                      # noqa: E731
+    Y = lambda v: v + 4                                        # noqa: E731
+    px = im.load()
+    rgb = {RGB[a]: RGB[b] for a, b in IKAME_RECOLOR.items()}
+    for yy in range(im.height):                                # Hanoi yellow / red -> cream / orange
+        for xx in range(im.width):
+            c = px[xx, yy]
+            if c[3] and c[:3] in rgb:
+                px[xx, yy] = rgb[c[:3]] + (255,)
+    # a yellow stripe under the orange band: the mascot's orange -> yellow
+    rect(im, FX1 + 2, Y(38), BW - 5, Y(38), "yl"); rect(im, FX1 + 2, Y(39), BW - 5, Y(39), "yl_l")
+    # destination board: route 35
+    rect(im, 6, Yf(5), FX1 - 2, Yf(9), "ink")
+    for i, ch in enumerate("35"):
+        for r, row in enumerate(DIGITS[ch]):
+            for c, v in enumerate(row):
+                if v == "x":
+                    put(im, 14 + i * 5 + c, Yf(5 + r), "or_l")
+    # rear window wrapped like an ad, mascot on it
+    x0, x1 = FX1 + 4, BW - 8
+    rect(im, x0 + 83, Y(WIN_Y0), x1, Y(WIN_Y1), "wc_l")
+    rect(im, x0 + 83, Y(WIN_Y1), x1, Y(WIN_Y1), "wc")
+    for r, row in enumerate(MASCOT):
+        for c, v in enumerate(row):
+            if v != ".":
+                put(im, x0 + 85 + c, Y(WIN_Y0 + 3 + r), MASCOT_COL[v])
+    # the Android robot in the middle window, waving while the bus idles
+    gx = x0 + 57
+    rect(im, gx - 1, Y(WIN_Y1 - 12), gx + 7, Y(WIN_Y1), "glass")            # clear the passenger who sat here
+    rect(im, gx - 2, Y(WIN_Y1 - 5), gx + 9, Y(WIN_Y1), "pb_d"); rect(im, gx - 2, Y(WIN_Y1 - 5), gx + 9, Y(WIN_Y1 - 5), "pb")
+    for r, row in enumerate(DROID_HEAD):
+        for c, v in enumerate(row):
+            if v != ".":
+                put(im, gx + c, Y(WIN_Y0 + 6 + r), DROID_COL[v])
+    top = WIN_Y0 + 6 + len(DROID_HEAD) + 1                     # 1 px gap between head and body, like the logo
+    rect(im, gx, Y(top), gx + 6, Y(WIN_Y1), "droid"); rect(im, gx + 6, Y(top), gx + 6, Y(WIN_Y1), "droid_d")
+    rect(im, gx + 8, Y(top), gx + 9, Y(top + 4), "droid_d")                    # far arm, resting
+    if wave:
+        rect(im, gx - 3, Y(WIN_Y0 + 5), gx - 2, Y(top - 1), "droid")          # near arm up, waving
+        put(im, gx - 3, Y(WIN_Y0 + 4), "droid")
+    else:
+        rect(im, gx - 3, Y(top), gx - 2, Y(top + 4), "droid")
+    return im
+
+
 BOLTS = [[(0, -3), (3, 0), (0, 3), (-3, 0)], [(2, -2), (2, 2), (-2, 2), (-2, -2)], [(-1, -3), (3, -1), (1, 3), (-3, 1)]]
 
 
@@ -162,10 +246,17 @@ if __name__ == "__main__":
     save_asset("actors", "bus32", frames, fps=12, anchor=(0, BH - 1), states={"drive": [0, 1, 2], "idle": [0, 0, 3, 3]},
                notes="bản 6c toy-bus style; front = left edge; anchor = front-bottom (tyre contact row). drive right->left")
     save_asset("actors", "bus_puff", puffs, fps=6, anchor=(3, 3), notes="exhaust puff, grows + fades")
+    ik = []
+    for i in range(3):
+        f = ikame_body(0); f.alpha_composite(wheels(i)); ik.append(f)
+    f = ikame_body(1, wave=True); f.alpha_composite(wheels(0)); ik.append(f)    # idle frame: dips + waves
+    save_asset("actors", "bus_ikame", ik, fps=12, anchor=(0, BH - 1), states={"drive": [0, 1, 2], "idle": [0, 0, 3, 3]},
+               notes="easter egg: iKame bus (mascot only, route 35, Android robot waving); same geometry as bus32")
+    frames = [ik[0], ik[3]] + frames
     from PIL import Image
     k = 5; bg = (169, 159, 146)
-    S = Image.new("RGB", (BW * k, BH * k * 2 + 10), bg)
-    for i, f in enumerate((frames[0], frames[3])):
+    S = Image.new("RGB", (BW * k, BH * k * 4 + 30), bg)
+    for i, f in enumerate((frames[0], frames[1], frames[2], frames[5])):
         b = Image.new("RGBA", f.size, bg + (255,)); b.alpha_composite(f)
         S.paste(b.convert("RGB").resize((BW * k, BH * k), Image.NEAREST), (0, i * (BH * k + 10)))
     S.save(sys.argv[1] if len(sys.argv) > 1 else "/tmp/bus.png")

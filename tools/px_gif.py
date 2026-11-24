@@ -71,6 +71,8 @@ PALETTE_GIF: dict[str, str] = {
     "fg_l": "#d3e3c8", "fg": "#b6cdb0", "fg_d": "#98b39c",
     # far high-rises: barely darker / greyer than the sky (faint, "mờ")
     "far_l": "#c6dbee", "far": "#b0c7dd", "far_d": "#9db5cc",
+    # easter egg (6c): the Android robot riding the iKame bus (Android brand green)
+    "droid": "#3ddc84", "droid_d": "#26a862",
 }
 
 _px.PALETTE.clear(); _px.PALETTE.update(PALETTE_GIF)

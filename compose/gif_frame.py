@@ -119,6 +119,8 @@ TIMELINES = {
 
 # the bus: arrives (ease-out), idles at the stop, leaves (ease-in). Times in the loop, x = bus front (left edge).
 BUS_T_IN, BUS_T_STOP, BUS_T_GO, BUS_T_OUT = 4.0, 8.5, 13.5, 18.5
+EASTER_BUS = {"ha": 0}     # easter egg: in the summer clip the iKame bus replaces bus 32 on lap 0 of 5 (the lap the
+                           # montage shows), i.e. once per 2 minutes; park scenes only
 BUS_X_STOP = 0                                         # 6c: the 148 px bus parks with its rear at x147, so the cat
                                                        # lying on the bench (x148-167) stays in view
 STUDENT_T, STUDENT_X0, STUDENT_V = 14.0, 132, 26.0     # kid revealed behind the leaving bus, walks right
@@ -424,6 +426,7 @@ def post(cv, t, look, lights):
 
 def draw_movers(cv, t, movers, look, lights):
     """Things that travel. Every period divides LOOP so the clip loops seamlessly."""
+    lap = int(t // LOOP) % 5                                 # which 24 s lap of the 120 s clip (easter egg bus)
     t = t % LOOP
     hide = look.get("hide", set())
     lit = look.grade in ("dusk", "night")
@@ -456,6 +459,8 @@ def draw_movers(cv, t, movers, look, lights):
         shadow(cv, x, STAND_Y + 1, SHADOW["pigeon_walk"])
         put_img(cv, img, pw.anchor, x, STAND_Y + 1, flip=not going_left)
     bus = movers.get("bus")
+    if look.scene != "house" and EASTER_BUS.get(look.key) == lap and movers.get("bus_ikame"):
+        bus = movers["bus_ikame"]
     if bus:
         bw = bus.frames[0].width
         bx = bus_x(t, bw)
@@ -565,7 +570,7 @@ def load_all(look: Look):
     movers = {k: load("actors", n) for k, n in
               (("walker", "walker_nonla"), ("lion_dance", "lion_dance"), ("bird", "sparrow_fly"),
                ("swallow", "swallow"), ("pigeon_walker", "pigeon_walk"), ("pigeon_fly", "pigeon_fly"),
-               ("bus", "bus32"), ("puff", "bus_puff"), ("student", "student_walk"),
+               ("bus", "bus32"), ("bus_ikame", "bus_ikame"), ("puff", "bus_puff"), ("student", "student_walk"),
                ("lantern_kid_a", "lantern_kid_a"), ("lantern_kid_b", "lantern_kid_b"), ("moto_dao", "moto_dao"),
                ("petal_peach", "petal_peach"), ("leaf_yellow", "leaf_yellow"))}
     for kind in ("xuan", "ha", "thu", "dong"):

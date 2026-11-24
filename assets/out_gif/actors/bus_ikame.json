@@ -1,0 +1,27 @@
+{
+ "name": "bus_ikame",
+ "group": "actors",
+ "frameW": 148,
+ "frameH": 58,
+ "frames": 4,
+ "fps": 12,
+ "anchor": [
+  0,
+  57
+ ],
+ "states": {
+  "drive": [
+   0,
+   1,
+   2
+  ],
+  "idle": [
+   0,
+   0,
+   3,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "easter egg: iKame bus (mascot only, route 35, Android robot waving); same geometry as bus32"
+}
