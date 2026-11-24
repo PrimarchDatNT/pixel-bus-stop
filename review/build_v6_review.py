@@ -121,6 +121,19 @@ clouds_html = '<div class="two">' + "".join(
     for st, lab in (("pixel", "Mây pixel kiểu ảnh mẫu (bản mới)"), ("soft", "Mây mềm (bản trước)"))) + "</div>"
 
 
+def vframe(src: Path, t: float) -> Image.Image:
+    r = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t:.3f}", "-i", str(src), "-frames:v", "1", "-f", "image2pipe",
+                        "-vcodec", "png", "-"], capture_output=True, check=True)
+    return Image.open(io.BytesIO(r.stdout)).convert("RGB").resize((960, 540), Image.BOX)
+
+
+GUSTS = [(46.4, "Hạ nắng → hạ mưa, đầu cơn gió"), (47.1, "Hạ nắng → hạ mưa, mép gió qua giữa khung"),
+         (94.6, "Thu → Đông, lá bàng đỏ bay theo gió"), (95.2, "Thu → Đông, gió sắp qua hết")]
+gust_html = '<div class="two">' + "".join(
+    f'<figure class="card"><img style="width:100%;height:auto;display:block" src="{jpg(vframe(CAFE / "bon_mua.mp4", t))}" alt="{c}">'
+    f'<figcaption class="cap">{c} (giây {t:g} của video 4 mùa)</figcaption></figure>' for t, c in GUSTS) + "</div>"
+
+
 def season_grid(base: Path):
     figs = []
     for k, title in SEASONS:
@@ -149,7 +162,8 @@ page = f"""<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body><main>
 <h1>Trạm Xe Bốn Mùa · quán cà phê cạnh công viên (bản 6c)</h1>
-<p class="mut"><b>Mới nhất:</b> mây vẽ lại theo ảnh mẫu anh gửi (opengameart 4_87): mỗi đám là một đống cụm tròn pixel chồng lên nhau, đỉnh sáng, càng xuống đáy càng sẫm, cụm thấp đè lên cụm cao, kèm vài vệt mây mỏng nằm ngang có đầu bậc thang. Mỗi mùa một bảng màu: hè trắng xanh, Tết trắng kem ánh hồng, mưa xám, Trung Thu vàng cam hồng tím đúng như ảnh mẫu (thêm một đám mây lớn bên trái trăng), Giao thừa chỉ có vệt mây mờ. Nền trời vẫn gradient mượt, mây vẫn trôi chậm sang phải (vòng 2 phút), và vẫn đi qua trước trăng.</p>
+<p class="mut"><b>Mới nhất:</b> trong video 4 mùa, chỗ chuyển mùa không còn vỡ ô vuông nữa. Thay vào đó là một cơn gió quét từ trái sang phải trong 2 giây: mép gió gợn sóng (vẫn bậc thang pixel), vệt gió trắng, và lá / hoa của mùa mới bay theo gió (đào cho Tết, hoa giấy và lá xanh cho hè, lá xanh cho mưa, lá vàng cam cho Trung Thu, lá bàng đỏ cho Giao thừa). Tiếng gió vù chạy từ loa trái sang loa phải theo mép gió. Mùa mới chạy tiếp đúng từ giây đang dở, không bị giật lùi như trước.</p>
+<p class="mut">Đợt trước: mây vẽ lại theo ảnh mẫu (chùm bông pixel), mây trôi chậm, nền trời gradient.</p>
 <p class="mut">Đợt trước: mây mềm vẽ ở 1920×1080. Bản đó vẫn giữ, đổi lại chỉ cần một dòng (xem phần so sánh bên dưới).</p>
 <p class="mut">Đợt này: thêm âm thanh. Nhạc lofi 80 BPM (đàn điện Rhodes, bass, trống nhẹ, tiếng đĩa than lạo xạo)
 với giai điệu kiểu đàn bầu, mỗi mùa một vòng hợp âm riêng (đông dùng hộp nhạc). Tiếng động khớp với hình: xe buýt tới từ bên phải,
@@ -167,6 +181,8 @@ khít cả tiếng lẫn hình. Tất cả âm thanh đều do máy tổng hợp
 <p class="mut">Video tự chạy ở chế độ tắt tiếng (trình duyệt bắt buộc vậy): bấm biểu tượng loa trên video để nghe. Các video từng mùa bên dưới bấm play là có tiếng.</p>
 <div class="card"><video src="{montage_cafe}" autoplay loop muted playsinline controls></video>
 <div class="cap">Xuân → Hạ nắng → Hạ mưa → Thu → Đông. Bản thu nhỏ ×2; file đầy đủ 1920×1080: review/gif_style/v6_cafe/bon_mua.mp4</div></div>
+<h3 style="padding:16px 0 8px">Chuyển mùa bằng cơn gió</h3>
+{gust_html}
 <div style="margin-top:12px">{season_grid(CAFE)}</div>
 
 {''.join(sections)}

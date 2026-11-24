@@ -1,0 +1,22 @@
+{
+ "name": "gust_leaf",
+ "group": "actors",
+ "frameW": 5,
+ "frameH": 4,
+ "frames": 4,
+ "fps": 8,
+ "anchor": [
+  2,
+  2
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "transition gust leaf, neutral green ramp (recoloured per season in compose/transition.py)"
+}

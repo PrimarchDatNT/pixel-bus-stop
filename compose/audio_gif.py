@@ -554,18 +554,50 @@ def mux(video, wav, out):
     tmp.replace(out)
 
 
-def montage_audio(loops, trans=1.0):
-    """Same structure as gif_frame.montage: each season 24 s, the last second dissolves into the next season."""
-    tf = int(trans * SR)
+WHOOSH_GAIN = 0.32
+
+
+def whoosh(dur, seed=0):
+    """The season-change gust: band-passed noise that swells as the front crosses the frame, a gusty flutter, a scatter
+    of leaf ticks, panned left -> right with the same easing as the picture (compose/transition.py)."""
+    rng = np.random.default_rng(300 + seed)
+    n = int(round(dur * SR))
+    t = np.arange(n) / SR
+    u = t / dur
+    x = rng.standard_normal(n)
+    lo, mid, hi_ = bp(x, 120, 450), bp(x, 450, 1600), bp(x, 1800, 6000)
+    swell = np.sin(np.pi * u) ** 1.6
+    bright = np.sin(np.pi * np.clip((u - 0.15) / 0.7, 0, 1)) ** 2
+    flutter = 1 + 0.3 * np.sin(2 * np.pi * (4.2 * t + 0.6 * np.sin(2 * np.pi * 0.9 * t)))
+    sig = (lo + 0.8 * mid * bright + 0.25 * hi_ * bright) * swell * flutter
+    ticks = np.zeros(n)
+    k = np.arange(400)
+    for _ in range(int(dur * 70)):                       # leaves / petals ticking past
+        i0 = int(rng.integers(0, n - 400))
+        ticks[i0:i0 + 400] += rng.uniform(0.3, 1.0) * rng.standard_normal(400) * np.exp(-k / 60)
+    sig = sig / (np.max(np.abs(sig)) + 1e-9) + 0.22 * hp(ticks, 2500) / (np.max(np.abs(ticks)) + 1e-9) * swell ** 2
+    L, R = pan_gains(-0.9 + 1.8 * u * u * (3 - 2 * u))
+    st = np.vstack([sig * L, sig * R])
+    return st / (np.max(np.abs(st)) + 1e-9)
+
+
+def montage_audio(loops, trans=None):
+    """Same timeline as gif_frame.montage: each season 24 s, starting `trans` s into its loop (its first seconds play
+    under the gust that brings it in); the last `trans` s cross-fade into the next season under a wind whoosh."""
+    trans = gf.MONTAGE_TRANS if trans is None else trans
+    tf = int(round(trans * SR))
     parts = []
     keys = list(loops)
     for i, k in enumerate(keys):
-        a = loops[k].copy()
+        a = np.roll(loops[k], -tf, axis=1)
         nxt = loops[keys[(i + 1) % len(keys)]]
         u = np.linspace(0, 1, tf)
         a[:, -tf:] = a[:, -tf:] * np.cos(u * np.pi / 2) + nxt[:, :tf] * np.sin(u * np.pi / 2)
+        a[:, -tf:] += WHOOSH_GAIN * whoosh(trans, seed=i)
         parts.append(a)
-    return np.concatenate(parts, axis=1)
+    m = np.concatenate(parts, axis=1)
+    pk = float(np.max(np.abs(m)))
+    return m * (0.97 / pk) if pk > 0.97 else m
 
 
 def attach(video: Path, wav: Path):

@@ -33,6 +33,7 @@ SCRIPTS = [
     "assets/src_gif/season/tet.py",
     "assets/src_gif/season/thu.py",
     "assets/src_gif/season/skies.py",
+    "assets/src_gif/season/gust.py",           # leaves / petals blown in by the season-change gust
     # park scene: kiosk (café / tạp hóa), trees, lawn, towers, tabby cat, cat on the bench, flower bike
     "assets/src_gif/park/park.py",
     "assets/src_gif/park/people.py",

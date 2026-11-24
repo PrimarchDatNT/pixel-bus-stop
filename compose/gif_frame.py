@@ -630,28 +630,28 @@ def render_season(key: str, anim: float | None, still_t: float = 5.0, scene: str
         print("anim:", out / "loop.mp4")
 
 
-def montage(keys, loops=1, trans=1.0, scene: str = "house"):
-    """All seasons back to back (each `loops` x 24 s) with a blocky 8x8 pixel dissolve into the next season."""
+MONTAGE_TRANS = 2.0      # seconds of the wind-gust season change (compose/transition.py; audio_gif follows it)
+
+
+def montage(keys, loops=1, trans=MONTAGE_TRANS, scene: str = "house"):
+    """All seasons back to back (each `loops` x 24 s); a gust of wind sweeps each next season in.
+
+    Season k plays its local frames tf .. tf + total - 1 (its first tf frames were already shown inside the gust that
+    brought it in), so nothing jumps back in time after a transition, and the end wraps cleanly into the start."""
+    import transition
     base = scene_dir(scene)
     n_loop = int(LOOP * FPS)
     tf = int(trans * FPS)
-    rnd = random.Random(4)
-    order = {(x, y): rnd.random() for y in range(0, H, 8) for x in range(0, W, 8)}
     enc = encoder(base / "bon_mua.mp4", 18)
-    B = 8 * 5
     for si, k in enumerate(keys):
         nxt = keys[(si + 1) % len(keys)]
         total = n_loop * loops
         for i in range(total):
-            im = hi_frame(base / k, i % n_loop)
+            im = hi_frame(base / k, i + tf)
             j = i - (total - tf)
-            if j >= 0:                                       # last second: dissolve into the next season
-                nb = hi_frame(base / nxt, j % n_loop)
-                im = im.copy()
-                u = (j + 1) / (tf + 1)
-                for (x, y), r in order.items():
-                    if r < u:
-                        im[y * 5:y * 5 + B, x * 5:x * 5 + B] = nb[y * 5:y * 5 + B, x * 5:x * 5 + B]
+            if j >= 0:                                       # last tf frames: the gust blows the next season in
+                nb = hi_frame(base / nxt, j)
+                im = transition.sweep(im, nb, j, tf, k, nxt, seed=si)
             enc.stdin.write(np.ascontiguousarray(im).tobytes())
     finish(enc)
     print("montage:", base / "bon_mua.mp4")
@@ -661,6 +661,9 @@ def main():
     anim = float(sys.argv[sys.argv.index("--anim") + 1]) if "--anim" in sys.argv else None
     still_t = float(sys.argv[sys.argv.index("--t") + 1]) if "--t" in sys.argv else 5.0
     scene = sys.argv[sys.argv.index("--scene") + 1] if "--scene" in sys.argv else "house"
+    if "--montage" in sys.argv:                                  # only re-join the already rendered seasons
+        montage(ORDER_OF_SEASONS, scene=scene)
+        return
     if "--all" in sys.argv:
         # the five seasons render side by side (one process each); --jobs 1 for the old one-at-a-time behaviour
         jobs = int(sys.argv[sys.argv.index("--jobs") + 1]) if "--jobs" in sys.argv else len(ORDER_OF_SEASONS)

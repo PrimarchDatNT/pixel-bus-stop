@@ -23,6 +23,7 @@ Cảnh được dựng từng khung bằng Python, âm thanh cũng do máy tổn
 | Vòng lặp cảnh | **24 giây**: mọi chuyển động (xe buýt, người, mèo, chim, mưa, pháo hoa, nhạc) có chu kỳ chia hết cho 24 s |
 | Vòng lặp mây | **120 giây** (mây trôi hết một vòng ngang màn hình) → mỗi clip mùa dài 2 phút, lặp khít |
 | Bầu trời | gradient mượt + mây pixel kiểu "chùm bông" trôi chậm, vẽ ở 1920×1080 sau cảnh pixel |
+| Chuyển mùa | trong video 4 mùa: một cơn gió quét từ trái sang phải trong 2 s, mang lá / hoa của mùa mới, kèm tiếng gió |
 | Âm thanh | 48 kHz stereo, nhạc lofi 80 BPM (8 ô nhịp = 24 s) + tiếng động khớp hình, AAC 192 kbps |
 
 ## Quy trình dựng video
@@ -36,6 +37,7 @@ flowchart LR
     F["compose/fx_gif.py<br/>mưa, sương, sao, pháo hoa, quầng đèn"] --> C
     K["compose/sky_soft.py<br/>trời gradient + mây trôi 1920×1080"] --> C
     C -->|"ghép trời ×5, ffmpeg x264"| V["loop.mp4 từng mùa<br/>bon_mua.mp4 (4 mùa nối nhau)"]
+    T["compose/transition.py<br/>cơn gió chuyển mùa"] --> V
     AU["compose/audio_gif.py<br/>tổng hợp nhạc + tiếng động"] -->|"mux AAC"| V
     V --> R["review/build_v6_review.py<br/>trang HTML xem lại"]
 ```
@@ -45,7 +47,8 @@ flowchart LR
    áp "look" của từng mùa, chạy các vật chuyển động và hiệu ứng, ra một khung 384×216 cho mỗi thời điểm `t`.
 3. **Ghép trời.** Bầu trời được vẽ riêng ở 1920×1080 (`compose/sky_soft.py`). Khung pixel được phóng ×5, rồi chỗ nào
    còn nhìn thấy trời thì lấy lại chi tiết trời độ phân giải cao. Nhờ vậy cảnh vẫn là pixel sắc nét còn trời mượt.
-4. **Mã hóa.** Khung 1920×1080 được đẩy thẳng vào ffmpeg (x264, CRF 16) → `loop.mp4` từng mùa và `bon_mua.mp4`.
+4. **Mã hóa.** Khung 1920×1080 được đẩy thẳng vào ffmpeg (x264, CRF 16) → `loop.mp4` từng mùa. Video 4 mùa
+   `bon_mua.mp4` nối các mùa bằng một cơn gió (`compose/transition.py`).
 5. **Âm thanh.** `compose/audio_gif.py` tổng hợp nhạc và tiếng động theo đúng mốc thời gian của hình, rồi ghép vào video.
 6. **Xem lại.** `review/build_v6_review.py` gói video thu nhỏ + ảnh vào một file HTML tự chứa để mở bằng trình duyệt.
 
@@ -94,6 +97,7 @@ Tham số của `compose/gif_frame.py`:
 | `--anim 120` | dựng video dài 120 s (bỏ đi thì chỉ ra khung tĩnh) |
 | `--t 10.5` | thời điểm của khung tĩnh `frame.png` |
 | `--jobs 1` | dựng lần lượt từng mùa thay vì song song |
+| `--montage` | chỉ nối lại `bon_mua.mp4` từ các mùa đã dựng (khoảng 2 phút), ví dụ khi sửa hiệu ứng chuyển mùa |
 
 Muốn có video dài (ví dụ 1 giờ cho YouTube) thì lặp file 2 phút, không cần dựng lại:
 
@@ -165,6 +169,7 @@ các file trong `assets/out_gif/`.
 | `season/tet.py` | đèn lồng, cờ, cây quất, xe máy chở đào, chim én, cánh đào |
 | `season/thu.py` | đèn ông sao, đội múa lân, trẻ em rước đèn, lá vàng |
 | `season/skies.py` | trời pixel cũ của từng mùa + trăng rằm (dùng trong trời mới) |
+| `season/gust.py` | lá và cánh hoa bay trong cơn gió chuyển mùa (tô màu lại theo mùa) |
 | `park/park.py` | công viên: hàng cây và nhà cao tầng xa, bãi cỏ, cây xà cừ, cây bàng, cột đèn, quán cà phê / tạp hóa |
 | `park/people.py` | mèo mướp trên quầy, mèo mun nằm trên ghế chờ (ngủ / ngẩng nhìn / nhìn theo xe) |
 | `park/bike.py` | xe đạp hoa, mỗi mùa một loại hoa |
@@ -187,6 +192,12 @@ Các thư mục `assets/src_gif/env`, `shelter`, `actors` (không có `_b`) là 
     mây mỏng.
   - `CLOUD_STYLE = "soft"` chuyển sang mây mềm vẽ kiểu tranh.
   - Mây trôi sang phải và quay vòng sau `CLOUD_PERIOD = 120` giây.
+- **Chuyển mùa** (`compose/transition.py`, dùng trong `montage()`):
+  - Trong 2 giây cuối mỗi mùa (`MONTAGE_TRANS`), một cơn gió quét từ trái sang phải. Mép gió gợn sóng, tính theo điểm ảnh
+    logic nên vẫn là bậc thang pixel; phía sau mép gió đã là mùa mới.
+  - Dọc mép gió có vệt gió trắng và lá / hoa của mùa mới bay theo: đào cho Tết, hoa giấy và lá xanh cho hè, lá xanh cho
+    mưa, lá vàng cam cho Trung Thu, lá bàng đỏ cho Giao thừa. Bảng `GUST` quy định loại và màu.
+  - Mùa mới tiếp tục từ đúng giây nó đã chạy trong cơn gió, nên sau khi chuyển cảnh không có gì bị giật lùi.
 
 ## Âm thanh
 
@@ -197,6 +208,8 @@ Toàn bộ âm thanh nằm trong `compose/audio_gif.py`, chỉ dùng numpy và s
 - **Tiếng động bám đúng mốc của hình**: xe buýt vào bến (phanh, xì hơi, mở đóng cửa), chuông xe đạp hoa, chim, tách chén
   trong quán, ve, mưa và sấm, gió và dế, trống lân, pháo hoa, chuông chùa.
 - **Lặp khít**: mọi âm "quấn vòng" qua mốc 24 s; vang và lọc tính theo kiểu vòng tròn nên chỗ nối không bị hụt hay lặp.
+- **Chuyển mùa**: nhạc hai mùa chồng nhau 2 giây, kèm tiếng gió vù (`whoosh()`): tiếng ồn lọc dải phồng lên khi mép gió qua
+  giữa khung, có tiếng lá lách tách, và chạy từ loa trái sang loa phải theo đúng mép gió.
 
 ## Quy tắc để video lặp khít
 
@@ -226,7 +239,7 @@ PLAN.md, SPEC*.md, STYLE*.md   kế hoạch, đặc tả, ghi chú phong cách q
 | 3 | thử ghép AI + pixel hoá |
 | 4–5 | phong cách "GIF" pastel 384×216, vẽ tay hoàn toàn; cảnh nhà phố Hà Nội + trạm xe + hoa giấy, 5 mùa |
 | 6 | đổi nhà phố thành quán cà phê cạnh công viên; mèo mun nằm ghế chờ, mèo mướp trong quán, xe đạp hoa, xe buýt mới, âm thanh |
-| 6c | trời gradient, mây pixel kiểu chùm bông trôi chậm (clip 2 phút), dựng song song |
+| 6c | trời gradient, mây pixel kiểu chùm bông trôi chậm (clip 2 phút), dựng song song, chuyển mùa bằng cơn gió |
 
 ## Không có trong repo
 
