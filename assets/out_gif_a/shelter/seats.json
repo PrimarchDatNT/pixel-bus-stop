@@ -1,0 +1,19 @@
+{
+ "name": "seats",
+ "group": "shelter",
+ "frameW": 384,
+ "frameH": 216,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Bench x150-203, seat top y=SEAT_Y (188), legs to y196. Module 1 x150-182 fits the seated adult."
+}

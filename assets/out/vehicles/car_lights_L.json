@@ -1,0 +1,19 @@
+{
+ "name": "car_lights_L",
+ "group": "vehicles",
+ "frameW": 72,
+ "frameH": 24,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  36,
+  23
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Overlay 72x24 for sedan_*/ (taxi: paste at y+7); head/tail lights dithered."
+}

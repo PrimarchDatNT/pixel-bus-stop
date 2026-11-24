@@ -1,0 +1,19 @@
+{
+ "name": "cloud_s2",
+ "group": "env",
+ "frameW": 40,
+ "frameH": 18,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "small fair-weather cloud, variant. Top-left anchor; compositor scrolls horizontally in the sky layer. No opacity baked."
+}

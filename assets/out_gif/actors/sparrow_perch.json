@@ -1,0 +1,24 @@
+{
+ "name": "sparrow_perch",
+ "group": "actors",
+ "frameW": 8,
+ "frameH": 7,
+ "frames": 6,
+ "fps": 3,
+ "anchor": [
+  4,
+  6
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "hand-pixelled, props.py (GIF style)"
+}

@@ -1,0 +1,21 @@
+{
+ "name": "rain_heavy_tile",
+ "group": "seasonal",
+ "frameW": 120,
+ "frameH": 120,
+ "frames": 3,
+ "fps": 12,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2
+  ]
+ },
+ "loop": true,
+ "notes": "120x120 seamless tile, slanted dense streaks, 3 frames. Ha mua rao."
+}

@@ -1,0 +1,30 @@
+{
+ "name": "cat_tabby",
+ "group": "actors",
+ "frameW": 12,
+ "frameH": 12,
+ "frames": 4,
+ "fps": 4,
+ "anchor": [
+  5,
+  11
+ ],
+ "states": {
+  "idle": [
+   0,
+   0,
+   0,
+   2,
+   0,
+   0,
+   1,
+   0,
+   0,
+   2,
+   0,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "mèo mướp sitting on the café counter; anchor = paws row"
+}

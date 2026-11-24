@@ -1,0 +1,19 @@
+{
+ "name": "shelter_back",
+ "group": "shelter",
+ "frameW": 384,
+ "frameH": 216,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Rear wall x41-170 y154-195: transparent glass panes with glare, kick panel, lightbox x42-68 y158-179, route map x70-90 y159-179."
+}

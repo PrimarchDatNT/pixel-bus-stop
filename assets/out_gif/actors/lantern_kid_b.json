@@ -1,0 +1,22 @@
+{
+ "name": "lantern_kid_b",
+ "group": "actors",
+ "frameW": 26,
+ "frameH": 34,
+ "frames": 4,
+ "fps": 8,
+ "anchor": [
+  5,
+  33
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "season: trung thu"
+}

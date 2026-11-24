@@ -1,0 +1,19 @@
+{
+ "name": "bus_lights_R",
+ "group": "vehicles",
+ "frameW": 170,
+ "frameH": 52,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  85,
+  51
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Overlay, same frame size as bus_R: window glow (dithered), lit LED, head/tail lights"
+}

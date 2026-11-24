@@ -1,0 +1,24 @@
+{
+ "name": "walk_umbrella_ha_L",
+ "group": "characters",
+ "frameW": 40,
+ "frameH": 37,
+ "frames": 6,
+ "fps": 8,
+ "anchor": [
+  20,
+  36
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "walk cycle 6f; ground speed = 2px/frame (stance feet move 2px/frame) -> 16px/s at 8fps (flip of _R)"
+}

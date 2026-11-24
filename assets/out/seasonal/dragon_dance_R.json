@@ -1,0 +1,26 @@
+{
+ "name": "dragon_dance_R",
+ "group": "seasonal",
+ "frameW": 164,
+ "frameH": 52,
+ "frames": 8,
+ "fps": 8,
+ "anchor": [
+  82,
+  50
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ "loop": true,
+ "notes": "Mua rong, faces RIGHT: 8 performers (red/yellow) under a gold dragon, travelling sine wave, lead performer with pearl in front. 8 frames @ 8fps. anchor = feet centre (x=82,y=50 = ground row). Thu/Xuan procession on road or sidewalk."
+}

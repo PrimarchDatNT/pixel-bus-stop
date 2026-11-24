@@ -1,0 +1,20 @@
+{
+ "name": "sparrow_perch",
+ "group": "actors",
+ "frameW": 12,
+ "frameH": 9,
+ "frames": 2,
+ "fps": 2,
+ "anchor": [
+  5,
+  8
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "perched, faces left (flip for right). anchor = feet row, centre"
+}

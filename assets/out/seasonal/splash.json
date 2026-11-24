@@ -1,0 +1,23 @@
+{
+ "name": "splash",
+ "group": "seasonal",
+ "frameW": 13,
+ "frameH": 8,
+ "frames": 5,
+ "fps": 15,
+ "anchor": [
+  6,
+  7
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "loop": false,
+ "notes": "Rain splash on ground, 5 frames; anchor = impact point (bottom-centre). Spawn randomly on road/sidewalk."
+}

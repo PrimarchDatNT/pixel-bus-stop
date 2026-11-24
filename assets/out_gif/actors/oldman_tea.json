@@ -1,0 +1,22 @@
+{
+ "name": "oldman_tea",
+ "group": "actors",
+ "frameW": 14,
+ "frameH": 25,
+ "frames": 4,
+ "fps": 2,
+ "anchor": [
+  7,
+  24
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": ""
+}

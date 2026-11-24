@@ -1,0 +1,19 @@
+{
+ "name": "tree_canopy_xuan",
+ "group": "env",
+ "frameW": 130,
+ "frameH": 95,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  68,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "130x95, place top-left at (350,30) (same origin as tree_trunk). static."
+}

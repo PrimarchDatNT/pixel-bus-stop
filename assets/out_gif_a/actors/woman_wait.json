@@ -1,0 +1,20 @@
+{
+ "name": "woman_wait",
+ "group": "actors",
+ "frameW": 16,
+ "frameH": 29,
+ "frames": 2,
+ "fps": 2,
+ "anchor": [
+  9,
+  19
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "seated, faces left; outline row 19 = thigh bottom, place on SEAT_Y-1. Legs dangle ~6px below seat"
+}

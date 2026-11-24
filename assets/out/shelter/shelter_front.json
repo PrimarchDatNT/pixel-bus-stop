@@ -1,0 +1,19 @@
+{
+ "name": "shelter_front",
+ "group": "shelter",
+ "frameW": 164,
+ "frameH": 96,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Canvas 164x96, top-left at scene (136,84), anchor (0,0). Layer shelter_front. Pillars x162-164 / x275-277 (feet y174), roof slab y122-128 (top face y122-124, fascia y125-127), header board 'TRAM XE BUYT', bus-stop sign on post x287-288."
+}

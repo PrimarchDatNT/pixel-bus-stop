@@ -1,0 +1,19 @@
+{
+ "name": "stool_blue",
+ "group": "actors",
+ "frameW": 11,
+ "frameH": 8,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  5,
+  7
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "hand-pixelled, props.py (GIF style)"
+}

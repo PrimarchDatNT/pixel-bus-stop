@@ -1,0 +1,22 @@
+{
+ "name": "lion_dance",
+ "group": "actors",
+ "frameW": 80,
+ "frameH": 30,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  40,
+  29
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "season: trung thu"
+}

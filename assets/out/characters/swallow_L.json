@@ -1,0 +1,22 @@
+{
+ "name": "swallow_L",
+ "group": "characters",
+ "frameW": 9,
+ "frameH": 7,
+ "frames": 4,
+ "fps": 10,
+ "anchor": [
+  4,
+  3
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "chim en, 9x7, anchor = body centre (flying: not ground-based) (flip of _R)"
+}

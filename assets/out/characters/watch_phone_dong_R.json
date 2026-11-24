@@ -1,0 +1,20 @@
+{
+ "name": "watch_phone_dong_R",
+ "group": "characters",
+ "frameW": 32,
+ "frameH": 33,
+ "frames": 2,
+ "fps": 2,
+ "anchor": [
+  16,
+  32
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "fireworks night watcher, face tilted up; anchor bottom-centre (feet)"
+}

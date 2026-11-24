@@ -1,0 +1,22 @@
+{
+ "name": "bike_flowers_ha",
+ "group": "actors",
+ "frameW": 64,
+ "frameH": 44,
+ "frames": 4,
+ "fps": 8,
+ "anchor": [
+  32,
+  43
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "xe đạp hoa (ha): faces right; anchor = centre-bottom (tyre row)"
+}

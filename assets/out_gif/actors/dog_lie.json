@@ -1,0 +1,26 @@
+{
+ "name": "dog_lie",
+ "group": "actors",
+ "frameW": 25,
+ "frameH": 11,
+ "frames": 8,
+ "fps": 6,
+ "anchor": [
+  12,
+  10
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ "loop": true,
+ "notes": ""
+}

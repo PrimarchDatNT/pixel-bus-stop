@@ -1,0 +1,22 @@
+{
+ "name": "breath_puff",
+ "group": "seasonal",
+ "frameW": 9,
+ "frameH": 6,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  1,
+  3
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": false,
+ "notes": "Tiny breath puff, 4 frames; anchor = mouth. Drifts right (flip for left-facing). Dong."
+}

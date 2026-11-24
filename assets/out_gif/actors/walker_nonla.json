@@ -1,0 +1,22 @@
+{
+ "name": "walker_nonla",
+ "group": "actors",
+ "frameW": 34,
+ "frameH": 25,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  17,
+  24
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": ""
+}

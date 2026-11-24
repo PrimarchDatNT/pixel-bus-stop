@@ -1,0 +1,20 @@
+{
+ "name": "moto_quat_xuan_L",
+ "group": "vehicles",
+ "frameW": 44,
+ "frameH": 32,
+ "frames": 2,
+ "fps": 12,
+ "anchor": [
+  15,
+  31
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "Facing left. 12fps wheel spin"
+}

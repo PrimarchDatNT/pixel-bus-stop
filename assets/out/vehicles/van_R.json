@@ -1,0 +1,20 @@
+{
+ "name": "van_R",
+ "group": "vehicles",
+ "frameW": 76,
+ "frameH": 32,
+ "frames": 2,
+ "fps": 12,
+ "anchor": [
+  38,
+  31
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "Delivery box van, facing R; 2 wheel frames @12fps. Light is upper-left only on R; L is a flip."
+}

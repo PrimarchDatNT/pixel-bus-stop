@@ -1,0 +1,21 @@
+{
+ "name": "decor_lanterns_xuan",
+ "group": "shelter",
+ "frameW": 164,
+ "frameH": 96,
+ "frames": 3,
+ "fps": 3,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2
+  ]
+ },
+ "loop": true,
+ "notes": "Canvas 164x96, top-left at scene (136,84), anchor (0,0). Layer shelter_decor. 4 red lanterns hung from roof underside y129 at x=177,188,253,267 (centre); 3-frame swing @3fps."
+}

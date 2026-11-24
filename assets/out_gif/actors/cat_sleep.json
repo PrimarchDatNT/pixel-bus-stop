@@ -1,0 +1,20 @@
+{
+ "name": "cat_sleep",
+ "group": "actors",
+ "frameW": 18,
+ "frameH": 9,
+ "frames": 2,
+ "fps": 2,
+ "anchor": [
+  9,
+  8
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": ""
+}

@@ -1,0 +1,19 @@
+{
+ "name": "ground",
+ "group": "env",
+ "frameW": 480,
+ "frameH": 112,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "480x112 opaque ground plate. Place top-left at (0,158). Local y = scene y - 158. Bands per layout.py."
+}

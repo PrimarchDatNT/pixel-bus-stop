@@ -1,0 +1,19 @@
+{
+ "name": "firecracker_deco",
+ "group": "seasonal",
+ "frameW": 6,
+ "frameH": 24,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  2,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Decorative string of firecrackers (dây pháo), anchor top (hanging point). Xuan."
+}

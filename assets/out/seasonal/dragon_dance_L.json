@@ -1,0 +1,26 @@
+{
+ "name": "dragon_dance_L",
+ "group": "seasonal",
+ "frameW": 164,
+ "frameH": 52,
+ "frames": 8,
+ "fps": 8,
+ "anchor": [
+  81,
+  50
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ "loop": true,
+ "notes": "mirror of _R"
+}

@@ -1,0 +1,19 @@
+{
+ "name": "shelter_back",
+ "group": "shelter",
+ "frameW": 164,
+ "frameH": 96,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Canvas 164x96, top-left at scene (136,84), anchor (0,0). Layer shelter_back. Rear frame: perforated bay (x168-186) with route-map panel, glass bay (x189-241, transparent), lit Ha Long Bay lightbox (x244-274). Feet y168."
+}

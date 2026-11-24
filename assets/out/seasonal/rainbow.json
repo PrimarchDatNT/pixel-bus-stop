@@ -1,0 +1,19 @@
+{
+ "name": "rainbow",
+ "group": "seasonal",
+ "frameW": 220,
+ "frameH": 70,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  110,
+  69
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Dithered elliptical rainbow arc 220x70, hard-alpha dither edges; anchor bottom-centre; compositor can apply opacity ~0.5. Ha after rain."
+}

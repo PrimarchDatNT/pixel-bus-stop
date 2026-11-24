@@ -1,0 +1,22 @@
+{
+ "name": "shopkeeper",
+ "group": "actors",
+ "frameW": 18,
+ "frameH": 17,
+ "frames": 4,
+ "fps": 2,
+ "anchor": [
+  9,
+  16
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": ""
+}

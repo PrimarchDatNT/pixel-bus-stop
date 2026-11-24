@@ -1,0 +1,13 @@
+import sys; sys.path.insert(0,'/Users/datnt1/Desktop/work/local-llm/pixel-bus-stop/tools')
+from shade25d import *
+L=default_lib()
+b=Buf(160,60,L)
+b.box(4,4,40,30,'paint_yellow',z=5,bevel=5,bulge_y=0.4)
+b.cyl_v(46,4,58,50,'chrome',z=5,cap=2)
+b.ellipsoid(80,22,14,14,'plastic_blue',z=5)
+b.capsule((100,10),(120,40),5,5,'fur_orange',z=4)
+b.cone(140,6,45,12,'bark',z=4)
+b.box(4,34,40,56,'paint_red',z=5,bevel=3,bulge_y=0.5)
+im=b.image()
+bg=Image.new('RGBA',im.size,(120,180,230,255)); bg.alpha_composite(im)
+bg.resize((960,360),Image.NEAREST).save('/private/tmp/claude-501/-Users-datnt1-Desktop-work-local-llm/aecac36a-4fde-49ae-bc08-0eb2ae68421d/scratchpad/t1.png')

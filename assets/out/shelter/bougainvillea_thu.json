@@ -1,0 +1,21 @@
+{
+ "name": "bougainvillea_thu",
+ "group": "shelter",
+ "frameW": 164,
+ "frameH": 96,
+ "frames": 3,
+ "fps": 3,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2
+  ]
+ },
+ "loop": true,
+ "notes": "Canvas 164x96, top-left at scene (136,84), anchor (0,0). Layer bougainvillea. 3 sway frames @3fps (drapes/outer tips +-1px, core static). Planter centre x150 (box x140-160,y163-174), trunk twists up left pillar, canopy y92-123 over roof, drapes over front edge, spill on right to y~150."
+}

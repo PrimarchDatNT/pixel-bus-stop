@@ -1,0 +1,20 @@
+{
+ "name": "lantern_string_trungthu",
+ "group": "seasonal",
+ "frameW": 160,
+ "frameH": 24,
+ "frames": 2,
+ "fps": 3,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "Multi-colour paper lanterns on sagging wire 160x24, 2-frame flicker, anchor TOP-LEFT (wire endpoints at x=0 and x=159, y=1). Between pole (x=52) / lamp (x=296) etc. Thu dusk/night; layer shelter_decor/lamp."
+}

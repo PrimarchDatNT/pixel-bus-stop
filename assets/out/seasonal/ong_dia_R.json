@@ -1,0 +1,22 @@
+{
+ "name": "ong_dia_R",
+ "group": "seasonal",
+ "frameW": 30,
+ "frameH": 28,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  13,
+  26
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "Ong Dia, 4-frame waddle, faces RIGHT. Thu procession. anchor=feet."
+}

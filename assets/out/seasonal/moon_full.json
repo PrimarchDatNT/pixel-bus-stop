@@ -1,0 +1,19 @@
+{
+ "name": "moon_full",
+ "group": "seasonal",
+ "frameW": 34,
+ "frameH": 34,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  17,
+  17
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Clean full moon disc 33px (34x34), soft crater shading, Chu Cuoi banyan lower-left; NO halo (compositor blooms). anchor=centre. Thu night."
+}

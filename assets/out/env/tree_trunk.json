@@ -1,0 +1,19 @@
+{
+ "name": "tree_trunk",
+ "group": "env",
+ "frameW": 130,
+ "frameH": 137,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  68,
+  136
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "130x137, place top-left at (350,30); trunk base at (418,166). Draw ground BEFORE it. Canopy layers share the same top-left origin."
+}

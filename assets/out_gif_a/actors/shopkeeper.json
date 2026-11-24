@@ -1,0 +1,21 @@
+{
+ "name": "shopkeeper",
+ "group": "actors",
+ "frameW": 21,
+ "frameH": 20,
+ "frames": 3,
+ "fps": 4,
+ "anchor": [
+  8,
+  19
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2
+  ]
+ },
+ "loop": true,
+ "notes": "front view, waist-up; anchor = bottom row at waist, centre. waist is hidden behind the counter top"
+}

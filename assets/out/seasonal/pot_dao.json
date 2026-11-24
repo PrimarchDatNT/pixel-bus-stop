@@ -1,0 +1,19 @@
+{
+ "name": "pot_dao",
+ "group": "seasonal",
+ "frameW": 26,
+ "frameH": 34,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  13,
+  33
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Potted peach-blossom tree; bottom-centre = ground contact. Place beside the shelter (e.g. x=148 or x=290, y=FAR_SIDEWALK_Y1). Xuan."
+}

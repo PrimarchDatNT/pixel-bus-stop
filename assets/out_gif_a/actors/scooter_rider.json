@@ -1,0 +1,20 @@
+{
+ "name": "scooter_rider",
+ "group": "actors",
+ "frameW": 36,
+ "frameH": 34,
+ "frames": 2,
+ "fps": 8,
+ "anchor": [
+  17,
+  33
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "faces right (flip for left). anchor = lowest wheel pixel row, wheelbase centre. y = WHEEL_Y"
+}

@@ -1,0 +1,19 @@
+{
+ "name": "seats",
+ "group": "shelter",
+ "frameW": 384,
+ "frameH": 216,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Two wooden benches on iron frames x44-112 (woman at x96) and x120-168. Seat top y=188, legs to 196."
+}

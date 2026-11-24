@@ -1,0 +1,22 @@
+{
+ "name": "flag_vn",
+ "group": "actors",
+ "frameW": 28,
+ "frameH": 22,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  0,
+  21
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "season: tết"
+}

@@ -1,0 +1,19 @@
+{
+ "name": "moto_parked",
+ "group": "actors",
+ "frameW": 37,
+ "frameH": 24,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  18,
+  23
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "side view facing right (flip for left). anchor=bottom of wheels, centre. place at MOTORBIKE_X, y=196 on sidewalk"
+}

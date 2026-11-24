@@ -1,0 +1,22 @@
+{
+ "name": "petal_peach",
+ "group": "actors",
+ "frameW": 3,
+ "frameH": 3,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  1,
+  1
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "season: tết"
+}

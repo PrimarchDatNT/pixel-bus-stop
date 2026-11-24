@@ -1,0 +1,19 @@
+{
+ "name": "lamp_lit",
+ "group": "env",
+ "frameW": 36,
+ "frameH": 82,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  8,
+  80
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "36x82, same frame/position as lamp (288,90). Emissive lens only (11 px row). Bulb centre scene coord = (310,98). Compositor adds bloom."
+}

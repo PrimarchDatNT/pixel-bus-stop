@@ -1,0 +1,20 @@
+{
+ "name": "tree_canopy_thu",
+ "group": "env",
+ "frameW": 130,
+ "frameH": 95,
+ "frames": 2,
+ "fps": 2,
+ "anchor": [
+  68,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "130x95, place top-left at (350,30) (same origin as tree_trunk). 2 sway frames @2fps."
+}

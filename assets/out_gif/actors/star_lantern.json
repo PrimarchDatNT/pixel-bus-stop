@@ -1,0 +1,22 @@
+{
+ "name": "star_lantern",
+ "group": "actors",
+ "frameW": 13,
+ "frameH": 17,
+ "frames": 4,
+ "fps": 2,
+ "anchor": [
+  6,
+  0
+ ],
+ "states": {
+  "sway": [
+   0,
+   1,
+   0,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "season: trung thu"
+}

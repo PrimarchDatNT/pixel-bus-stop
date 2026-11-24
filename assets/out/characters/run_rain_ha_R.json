@@ -1,0 +1,24 @@
+{
+ "name": "run_rain_ha_R",
+ "group": "characters",
+ "frameW": 36,
+ "frameH": 35,
+ "frames": 6,
+ "fps": 12,
+ "anchor": [
+  18,
+  34
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "running, bag held over head; ~3.5px/frame ground speed (~42px/s @12fps)"
+}

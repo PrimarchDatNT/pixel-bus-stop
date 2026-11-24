@@ -1,0 +1,30 @@
+{
+ "name": "pigeon_walk",
+ "group": "actors",
+ "frameW": 14,
+ "frameH": 11,
+ "frames": 4,
+ "fps": 4,
+ "anchor": [
+  7,
+  10
+ ],
+ "states": {
+  "walk": [
+   0,
+   1
+  ],
+  "peck": [
+   0,
+   2,
+   3,
+   2,
+   3,
+   0,
+   0,
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "hand-pixelled, props.py (GIF style)"
+}

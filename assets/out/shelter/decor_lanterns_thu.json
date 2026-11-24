@@ -1,0 +1,20 @@
+{
+ "name": "decor_lanterns_thu",
+ "group": "shelter",
+ "frameW": 164,
+ "frameH": 96,
+ "frames": 2,
+ "fps": 2,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "Canvas 164x96, top-left at scene (136,84), anchor (0,0). Layer shelter_decor. Mid-Autumn paper-lantern strings along the roof edge (broken over the header board); 2-frame flicker. fps=2."
+}

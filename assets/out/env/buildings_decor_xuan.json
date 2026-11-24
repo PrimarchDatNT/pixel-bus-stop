@@ -1,0 +1,19 @@
+{
+ "name": "buildings_decor_xuan",
+ "group": "env",
+ "frameW": 480,
+ "frameH": 130,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Tet overlay on buildings (same size/pos (0,32)): flags on balconies + red lanterns beside shop signs."
+}

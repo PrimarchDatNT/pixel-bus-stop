@@ -1,0 +1,22 @@
+{
+ "name": "steam",
+ "group": "actors",
+ "frameW": 4,
+ "frameH": 9,
+ "frames": 4,
+ "fps": 4,
+ "anchor": [
+  1,
+  9
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "anchor bottom centre; place above thermos cap"
+}

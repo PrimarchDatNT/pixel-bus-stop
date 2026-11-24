@@ -1,0 +1,22 @@
+{
+ "name": "sparrow_fly",
+ "group": "actors",
+ "frameW": 8,
+ "frameH": 7,
+ "frames": 4,
+ "fps": 10,
+ "anchor": [
+  3,
+  3
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "hand-pixelled, props.py (GIF style)"
+}

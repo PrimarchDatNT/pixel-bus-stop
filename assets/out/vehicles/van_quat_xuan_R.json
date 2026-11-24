@@ -1,0 +1,20 @@
+{
+ "name": "van_quat_xuan_R",
+ "group": "vehicles",
+ "frameW": 76,
+ "frameH": 32,
+ "frames": 2,
+ "fps": 12,
+ "anchor": [
+  38,
+  31
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "Open-bed truck loaded with 3 kumquat trees (Tet); facing R."
+}

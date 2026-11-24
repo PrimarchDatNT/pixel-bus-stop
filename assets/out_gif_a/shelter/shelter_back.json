@@ -1,0 +1,19 @@
+{
+ "name": "shelter_back",
+ "group": "shelter",
+ "frameW": 384,
+ "frameH": 216,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Rear glass shelter wall: transparent glass panes (frame + glare), route map left, lit lightbox right."
+}

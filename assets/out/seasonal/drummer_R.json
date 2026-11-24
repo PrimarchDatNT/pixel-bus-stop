@@ -1,0 +1,24 @@
+{
+ "name": "drummer_R",
+ "group": "seasonal",
+ "frameW": 38,
+ "frameH": 34,
+ "frames": 6,
+ "fps": 8,
+ "anchor": [
+  13,
+  32
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "Drummer, red trong worn at belly with pale drumhead, 2px sticks alternate, 6-frame walk RIGHT. Thu procession."
+}

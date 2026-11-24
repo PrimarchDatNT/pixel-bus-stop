@@ -1,0 +1,22 @@
+{
+ "name": "cat_tail",
+ "group": "actors",
+ "frameW": 28,
+ "frameH": 20,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  10,
+  12
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "sleeping cat, tail hangs over roof edge and flicks; same body position as cat_sleep"
+}

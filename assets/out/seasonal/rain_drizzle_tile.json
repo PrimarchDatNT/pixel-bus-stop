@@ -1,0 +1,21 @@
+{
+ "name": "rain_drizzle_tile",
+ "group": "seasonal",
+ "frameW": 120,
+ "frameH": 120,
+ "frames": 3,
+ "fps": 12,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2
+  ]
+ },
+ "loop": true,
+ "notes": "120x120 seamless tile (wraps both axes), 3 frames; compositor tiles + scrolls down. Xuan mua bui / Dong mua phun. Set opacity at render."
+}

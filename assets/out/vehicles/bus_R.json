@@ -1,0 +1,28 @@
+{
+ "name": "bus_R",
+ "group": "vehicles",
+ "frameW": 170,
+ "frameH": 52,
+ "frames": 6,
+ "fps": 12,
+ "anchor": [
+  85,
+  51
+ ],
+ "states": {
+  "drive": [
+   0,
+   1
+  ],
+  "doors_open": [
+   2,
+   3
+  ],
+  "stop": [
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "Frames 2-3 doors_open: 2=half, 3=full (play 2 then hold 3; reverse to close). Doors on this (right) side. Front door centre x=130, mid door centre x=80. stop = brake lights on + hazard blink (alternates each frame; use ~3fps). Frames 0-1 drive (wheel spin 12fps). Facing right."
+}

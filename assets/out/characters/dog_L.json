@@ -1,0 +1,24 @@
+{
+ "name": "dog_L",
+ "group": "characters",
+ "frameW": 32,
+ "frameH": 18,
+ "frames": 6,
+ "fps": 10,
+ "anchor": [
+  16,
+  17
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "street dog trot 6f; ground speed 2px/frame (20px/s @10fps) (flip of _R)"
+}

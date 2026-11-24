@@ -1,0 +1,19 @@
+{
+ "name": "stool_red",
+ "group": "shelter",
+ "frameW": 10,
+ "frameH": 12,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  5,
+  11
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Loose red plastic stool. Bottom-centre anchor = ground contact. Suggested placement x=282, base_y=177 (right of shelter, in front of sign post)."
+}

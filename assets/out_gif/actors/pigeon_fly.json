@@ -1,0 +1,22 @@
+{
+ "name": "pigeon_fly",
+ "group": "actors",
+ "frameW": 14,
+ "frameH": 9,
+ "frames": 4,
+ "fps": 9,
+ "anchor": [
+  6,
+  4
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "hand-pixelled, props.py (GIF style)"
+}

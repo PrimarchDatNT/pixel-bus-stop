@@ -1,0 +1,19 @@
+{
+ "name": "shelter_wet",
+ "group": "shelter",
+ "frameW": 164,
+ "frameH": 96,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Canvas 164x96, top-left at scene (136,84), anchor (0,0). Layer above shelter_front/seats in rain/after rain: wet highlights on roof edge, seats, drips, puddle glints."
+}

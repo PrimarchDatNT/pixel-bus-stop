@@ -1,0 +1,20 @@
+{
+ "name": "banner_tet",
+ "group": "seasonal",
+ "frameW": 100,
+ "frameH": 16,
+ "frames": 2,
+ "fps": 2,
+ "anchor": [
+  50,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "2-frame gentle wave; anchor top-centre (hang across the street / between pole+lamp, y~96). Xuan."
+}

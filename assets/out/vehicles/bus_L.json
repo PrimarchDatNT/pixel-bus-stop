@@ -1,0 +1,24 @@
+{
+ "name": "bus_L",
+ "group": "vehicles",
+ "frameW": 170,
+ "frameH": 52,
+ "frames": 4,
+ "fps": 12,
+ "anchor": [
+  85,
+  51
+ ],
+ "states": {
+  "drive": [
+   0,
+   1
+  ],
+  "stop": [
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "No doors (camera sees driver's side). Front-left end: raked windscreen with driver, LED sign above, headlights; rear: louvres + small window + taillights. stop = brake lights on + hazard blink (alternates each frame; use ~3fps). Frames 0-1 drive (wheel spin 12fps). Facing left."
+}

@@ -1,0 +1,22 @@
+{
+ "name": "steam",
+ "group": "actors",
+ "frameW": 4,
+ "frameH": 9,
+ "frames": 4,
+ "fps": 4,
+ "anchor": [
+  1,
+  8
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "hand-pixelled, props.py (GIF style)"
+}

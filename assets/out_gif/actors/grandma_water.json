@@ -1,0 +1,20 @@
+{
+ "name": "grandma_water",
+ "group": "actors",
+ "frameW": 14,
+ "frameH": 26,
+ "frames": 2,
+ "fps": 3,
+ "anchor": [
+  7,
+  25
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": ""
+}

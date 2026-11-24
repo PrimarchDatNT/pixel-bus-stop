@@ -1,0 +1,28 @@
+{
+ "name": "petal_bloom",
+ "group": "seasonal",
+ "frameW": 3,
+ "frameH": 3,
+ "frames": 8,
+ "fps": 8,
+ "anchor": [
+  1,
+  1
+ ],
+ "states": {
+  "a": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "b": [
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ "loop": true,
+ "notes": "Bougainvillea petal 3x3, tumbling; two shades as states a (bloom_l) / b (bloom). Thu wind."
+}

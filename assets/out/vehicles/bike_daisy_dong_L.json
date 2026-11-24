@@ -1,0 +1,22 @@
+{
+ "name": "bike_daisy_dong_L",
+ "group": "vehicles",
+ "frameW": 50,
+ "frameH": 36,
+ "frames": 4,
+ "fps": 8,
+ "anchor": [
+  17,
+  35
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "Bicycle flower vendor, nón lá; 4-frame pedal loop @8fps; cargo extends 15 px behind bike. Facing left."
+}

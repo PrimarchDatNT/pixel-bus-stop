@@ -1,0 +1,19 @@
+{
+ "name": "decor_cau_doi_xuan",
+ "group": "shelter",
+ "frameW": 164,
+ "frameH": 96,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Canvas 164x96, top-left at scene (136,84), anchor (0,0). Layer shelter_decor. Two couplets (6x30) hung on inner faces of pillars: left sprite top-left scene (166,131), right (269,131). Single frame."
+}

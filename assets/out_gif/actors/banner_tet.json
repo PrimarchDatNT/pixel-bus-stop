@@ -1,0 +1,19 @@
+{
+ "name": "banner_tet",
+ "group": "actors",
+ "frameW": 82,
+ "frameH": 13,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "season: tết"
+}

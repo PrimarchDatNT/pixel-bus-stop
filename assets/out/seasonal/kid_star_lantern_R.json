@@ -1,0 +1,24 @@
+{
+ "name": "kid_star_lantern_R",
+ "group": "seasonal",
+ "frameW": 48,
+ "frameH": 44,
+ "frames": 6,
+ "fps": 8,
+ "anchor": [
+  17,
+  41
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "Kid with đèn ông sao, walks RIGHT, dithered glow halo baked into frames (frame-locked). anchor=feet. Thu night; far_walkers at y=WALK_FAR_BASE_Y."
+}

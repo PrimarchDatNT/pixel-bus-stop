@@ -1,0 +1,22 @@
+{
+ "name": "ripple",
+ "group": "seasonal",
+ "frameW": 18,
+ "frameH": 7,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  9,
+  3
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": false,
+ "notes": "Puddle ring, 4 frames; anchor = centre. Use on puddles on road."
+}

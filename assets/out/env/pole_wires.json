@@ -1,0 +1,19 @@
+{
+ "name": "pole_wires",
+ "group": "env",
+ "frameW": 480,
+ "frameH": 170,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "480x170 at (0,0). Pole base at (52,165). Bird perch points (feet): (220,52), (250,54), (310,54), (360,52), (400,49), (440,45), (140,45), (88,38)"
+}

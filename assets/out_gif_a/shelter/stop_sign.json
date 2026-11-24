@@ -1,0 +1,19 @@
+{
+ "name": "stop_sign",
+ "group": "shelter",
+ "frameW": 384,
+ "frameH": 216,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Post at x244-245, plate x238-251 y128-141, route plate x239-250 y143-152."
+}

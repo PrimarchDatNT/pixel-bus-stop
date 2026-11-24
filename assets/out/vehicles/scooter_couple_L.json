@@ -1,0 +1,20 @@
+{
+ "name": "scooter_couple_L",
+ "group": "vehicles",
+ "frameW": 38,
+ "frameH": 28,
+ "frames": 2,
+ "fps": 12,
+ "anchor": [
+  15,
+  27
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "Facing left. 12fps wheel spin"
+}

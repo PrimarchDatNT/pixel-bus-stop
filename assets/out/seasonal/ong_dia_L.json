@@ -1,0 +1,22 @@
+{
+ "name": "ong_dia_L",
+ "group": "seasonal",
+ "frameW": 30,
+ "frameH": 28,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  16,
+  26
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "mirror of _R"
+}

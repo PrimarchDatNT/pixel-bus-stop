@@ -1,0 +1,21 @@
+{
+ "name": "bougainvillea",
+ "group": "shelter",
+ "frameW": 384,
+ "frameH": 216,
+ "frames": 3,
+ "fps": 3,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2
+  ]
+ },
+ "loop": true,
+ "notes": "Trunk + planter static; core mass static; edge clumps/drapes sway 1px over 3 frames."
+}

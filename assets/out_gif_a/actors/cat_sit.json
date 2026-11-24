@@ -1,0 +1,19 @@
+{
+ "name": "cat_sit",
+ "group": "actors",
+ "frameW": 12,
+ "frameH": 11,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  6,
+  10
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "sitting pose facing left"
+}

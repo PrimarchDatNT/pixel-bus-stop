@@ -1,0 +1,19 @@
+{
+ "name": "lamp",
+ "group": "env",
+ "frameW": 36,
+ "frameH": 82,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  8,
+  80
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "36x82. Place top-left at (288,90) so pole base lands at (296,170). Lamp head ~y98-103, arm points RIGHT. Draw AFTER ground (ground plate would cover the pole foot)."
+}

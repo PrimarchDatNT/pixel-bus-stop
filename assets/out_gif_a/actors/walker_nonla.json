@@ -1,0 +1,24 @@
+{
+ "name": "walker_nonla",
+ "group": "actors",
+ "frameW": 34,
+ "frameH": 34,
+ "frames": 6,
+ "fps": 8,
+ "anchor": [
+  17,
+  33
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "faces right (flip for left). anchor=feet row (support foot), torso centre; ~32 wide incl. pole and baskets"
+}

@@ -1,0 +1,19 @@
+{
+ "name": "tea_stall",
+ "group": "actors",
+ "frameW": 32,
+ "frameH": 25,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  16,
+  24
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "anchor = bottom of legs, centre. place x=TRA_DA_X+16 (sprite left=262), y=196. thermos top ~24px above"
+}

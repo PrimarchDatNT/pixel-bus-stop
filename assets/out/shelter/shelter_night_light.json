@@ -1,0 +1,19 @@
+{
+ "name": "shelter_night_light",
+ "group": "shelter",
+ "frameW": 164,
+ "frameH": 96,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Canvas 164x96, top-left at scene (136,84), anchor (0,0). Layer shelter_decor (above, at night). Emissive-only (no glow pixels): lit tube y131-132 x190-240, lit lightbox poster, lit header board. Compositor adds bloom."
+}

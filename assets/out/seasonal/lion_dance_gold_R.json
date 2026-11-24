@@ -1,0 +1,30 @@
+{
+ "name": "lion_dance_gold_R",
+ "group": "seasonal",
+ "frameW": 64,
+ "frameH": 64,
+ "frames": 10,
+ "fps": 8,
+ "anchor": [
+  36,
+  62
+ ],
+ "states": {
+  "walk": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "rear": [
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ "loop": true,
+ "notes": "Mua lan, faces RIGHT. states: walk(0-5, loop) / rear(6-9, front performer stands tall, head +14px). anchor=feet centre, ground row = fh-2. Thu procession."
+}

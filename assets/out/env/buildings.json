@@ -1,0 +1,19 @@
+{
+ "name": "buildings",
+ "group": "env",
+ "frameW": 480,
+ "frameH": 130,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "480x130, top-left at (0,32); bottom row 129 = scene y 161 (BUILDING_BASE_Y)."
+}

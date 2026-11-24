@@ -1,0 +1,22 @@
+{
+ "name": "swallow",
+ "group": "actors",
+ "frameW": 11,
+ "frameH": 6,
+ "frames": 4,
+ "fps": 10,
+ "anchor": [
+  5,
+  3
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "season: tết"
+}

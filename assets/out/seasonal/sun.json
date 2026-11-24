@@ -1,0 +1,20 @@
+{
+ "name": "sun",
+ "group": "seasonal",
+ "frameW": 19,
+ "frameH": 19,
+ "frames": 2,
+ "fps": 3,
+ "anchor": [
+  9,
+  9
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "Sun disc with 2-frame ray shimmer; layer celestial. Ha."
+}

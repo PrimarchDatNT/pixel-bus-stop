@@ -1,0 +1,22 @@
+{
+ "name": "sparrow_fly",
+ "group": "actors",
+ "frameW": 10,
+ "frameH": 11,
+ "frames": 4,
+ "fps": 8,
+ "anchor": [
+  5,
+  5
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "flying, faces left (flip for right). anchor = body centre"
+}

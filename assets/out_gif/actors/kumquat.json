@@ -1,0 +1,19 @@
+{
+ "name": "kumquat",
+ "group": "actors",
+ "frameW": 21,
+ "frameH": 30,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  10,
+  29
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "season: tết"
+}

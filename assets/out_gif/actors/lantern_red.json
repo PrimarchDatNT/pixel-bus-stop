@@ -1,0 +1,22 @@
+{
+ "name": "lantern_red",
+ "group": "actors",
+ "frameW": 9,
+ "frameH": 13,
+ "frames": 4,
+ "fps": 2,
+ "anchor": [
+  4,
+  0
+ ],
+ "states": {
+  "sway": [
+   0,
+   1,
+   0,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "season: tết"
+}

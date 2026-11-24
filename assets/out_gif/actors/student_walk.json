@@ -1,0 +1,22 @@
+{
+ "name": "student_walk",
+ "group": "actors",
+ "frameW": 12,
+ "frameH": 19,
+ "frames": 4,
+ "fps": 8,
+ "anchor": [
+  6,
+  18
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": ""
+}

@@ -1,0 +1,19 @@
+{
+ "name": "cloud_rain1",
+ "group": "env",
+ "frameW": 230,
+ "frameH": 62,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "wide storm cloud for the summer downpour. Top-left anchor; compositor scrolls horizontally in the sky layer. No opacity baked."
+}

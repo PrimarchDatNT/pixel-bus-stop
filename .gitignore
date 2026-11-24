@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Rendered output: regenerate with compose/gif_frame.py, compose/audio_gif.py, review/build_v6_review.py
+review/gif_style/
+review/gif_style_a/
+review/stills/
+review/dist/
+review/style/
+review/*.html
+review/*.png
+*.mp4
+*.wav
+
+# Heavy legacy renders (v2 AI / 3D experiments, v3 plates): several hundred MB, not used by the current video
+assets/out_v2/
+assets/out_v3/
+
+# Third-party reference images (Pinterest GIF, frames from other videos): not ours to redistribute
+refs/

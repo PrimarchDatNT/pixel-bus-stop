@@ -1,0 +1,24 @@
+{
+ "name": "walk_schoolgirl_ha_R",
+ "group": "characters",
+ "frameW": 32,
+ "frameH": 29,
+ "frames": 6,
+ "fps": 8,
+ "anchor": [
+  16,
+  28
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "walk cycle 6f; ground speed = 2px/frame (stance feet move 2px/frame) -> 16px/s at 8fps"
+}

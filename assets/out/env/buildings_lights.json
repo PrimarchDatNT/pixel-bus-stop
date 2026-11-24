@@ -1,0 +1,19 @@
+{
+ "name": "buildings_lights",
+ "group": "env",
+ "frameW": 480,
+ "frameH": 130,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Night overlay, same size/pos as buildings (0,32)."
+}

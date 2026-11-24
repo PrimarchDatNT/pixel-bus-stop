@@ -1,0 +1,22 @@
+{
+ "name": "oldman_tea",
+ "group": "actors",
+ "frameW": 16,
+ "frameH": 26,
+ "frames": 4,
+ "fps": 3,
+ "anchor": [
+  3,
+  25
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "seated, faces left; anchor=sandal bottom row; sits on a stool (stool top row ~ thigh bottom row)"
+}

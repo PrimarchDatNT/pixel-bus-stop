@@ -1,0 +1,19 @@
+{
+ "name": "shelter_front",
+ "group": "shelter",
+ "frameW": 384,
+ "frameH": 216,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Pillars x37-39 & 171-173, roof slab x36-176 y150-154 (no header board since 6c)."
+}

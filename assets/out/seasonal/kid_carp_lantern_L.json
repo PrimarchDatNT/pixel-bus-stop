@@ -1,0 +1,24 @@
+{
+ "name": "kid_carp_lantern_L",
+ "group": "seasonal",
+ "frameW": 52,
+ "frameH": 38,
+ "frames": 6,
+ "fps": 8,
+ "anchor": [
+  34,
+  35
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "loop": true,
+ "notes": "mirror of _R"
+}

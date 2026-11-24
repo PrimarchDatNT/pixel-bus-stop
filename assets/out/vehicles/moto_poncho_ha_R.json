@@ -1,0 +1,22 @@
+{
+ "name": "moto_poncho_ha_R",
+ "group": "vehicles",
+ "frameW": 32,
+ "frameH": 28,
+ "frames": 4,
+ "fps": 12,
+ "anchor": [
+  16,
+  27
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "Facing right. 12fps wheel spin + poncho flutter (4 frames)"
+}

@@ -1,0 +1,34 @@
+{
+ "name": "sparrow_L",
+ "group": "characters",
+ "frameW": 9,
+ "frameH": 7,
+ "frames": 10,
+ "fps": 10,
+ "anchor": [
+  4,
+  6
+ ],
+ "states": {
+  "fly": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "idle": [
+   4,
+   5
+  ],
+  "peck": [
+   6,
+   7
+  ],
+  "hop": [
+   8,
+   9
+  ]
+ },
+ "loop": true,
+ "notes": "chim se; states: fly 4f@10fps, idle 2f@2fps, peck 2f@4fps, hop 2f@4fps (perched states anchor = feet) (flip of _R)"
+}

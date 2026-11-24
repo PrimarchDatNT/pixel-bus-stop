@@ -1,0 +1,20 @@
+{
+ "name": "woman_wait",
+ "group": "actors",
+ "frameW": 16,
+ "frameH": 29,
+ "frames": 2,
+ "fps": 2,
+ "anchor": [
+  7,
+  20
+ ],
+ "states": {
+  "default": [
+   0,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": ""
+}

@@ -1,0 +1,21 @@
+{
+ "name": "decor_lights_dong",
+ "group": "shelter",
+ "frameW": 164,
+ "frameH": 96,
+ "frames": 3,
+ "fps": 3,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2
+  ]
+ },
+ "loop": true,
+ "notes": "Canvas 164x96, top-left at scene (136,84), anchor (0,0). Layer shelter_decor. Fairy-light string along roof edge + swags through the bougainvillea; 3-frame blink @3fps."
+}

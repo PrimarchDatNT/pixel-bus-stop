@@ -1,0 +1,22 @@
+{
+ "name": "stand_wait_dong_R",
+ "group": "characters",
+ "frameW": 32,
+ "frameH": 29,
+ "frames": 4,
+ "fps": 2,
+ "anchor": [
+  16,
+  28
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "waiting person; feet at WAIT_BASE_Y; sit_* anchor x = hip/seat centre (seat surface ~7px above feet row)"
+}

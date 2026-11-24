@@ -1,0 +1,22 @@
+{
+ "name": "petals",
+ "group": "shelter",
+ "frameW": 3,
+ "frameH": 3,
+ "frames": 4,
+ "fps": 6,
+ "anchor": [
+  1,
+  1
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "Tumbling bract, 3x3, centre anchor (1,1); compositor spawns many."
+}

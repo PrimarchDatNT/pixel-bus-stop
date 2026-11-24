@@ -1,0 +1,19 @@
+{
+ "name": "stool_red",
+ "group": "actors",
+ "frameW": 9,
+ "frameH": 10,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  4,
+  9
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "anchor = bottom centre"
+}

@@ -1,0 +1,19 @@
+{
+ "name": "title_ha",
+ "group": "seasonal",
+ "frameW": 64,
+ "frameH": 26,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  32,
+  13
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Season title card 64x26 (was 88x44), hand-drawn 7x9 face, cream fill + 1px outline + drop shadow, 11x11 icon; anchor=centre. Ha."
+}

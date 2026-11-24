@@ -1,0 +1,19 @@
+{
+ "name": "ground_wet",
+ "group": "env",
+ "frameW": 480,
+ "frameH": 112,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Overlay, same size/pos as ground (0,158). Puddles + sheen; show during/after rain."
+}

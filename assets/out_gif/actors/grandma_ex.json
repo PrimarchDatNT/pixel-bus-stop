@@ -1,0 +1,22 @@
+{
+ "name": "grandma_ex",
+ "group": "actors",
+ "frameW": 16,
+ "frameH": 28,
+ "frames": 3,
+ "fps": 2,
+ "anchor": [
+  7,
+  27
+ ],
+ "states": {
+  "ex": [
+   0,
+   1,
+   2,
+   1
+  ]
+ },
+ "loop": true,
+ "notes": "grandma exercising on the park path (park scene); anchor = feet"
+}

@@ -1,0 +1,19 @@
+{
+ "name": "pot_quat",
+ "group": "seasonal",
+ "frameW": 22,
+ "frameH": 28,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  11,
+  27
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "Potted kumquat with li xi tags; bottom-centre. Xuan."
+}

@@ -1,0 +1,19 @@
+{
+ "name": "tea_table",
+ "group": "actors",
+ "frameW": 39,
+ "frameH": 24,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  21,
+  23
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "hand-pixelled, props.py (GIF style)"
+}

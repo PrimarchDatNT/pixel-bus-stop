@@ -1,0 +1,78 @@
+{
+ "name": "cat_tuxedo_R",
+ "group": "characters",
+ "frameW": 48,
+ "frameH": 30,
+ "frames": 30,
+ "fps": 10,
+ "anchor": [
+  24,
+  29
+ ],
+ "states": {
+  "walk": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "sit_down": [
+   8,
+   9,
+   10
+  ],
+  "sit_idle": [
+   11,
+   12,
+   13,
+   14
+  ],
+  "lick_paw": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "look_camera": [
+   21,
+   22
+  ],
+  "lie_down": [
+   23,
+   24,
+   25
+  ],
+  "sleep": [
+   26,
+   27,
+   28,
+   29
+  ]
+ },
+ "loop": true,
+ "notes": "foreground cat (tuxedo coat), 1.6x. states walk(8@10, 2px/frame), sit_down(3@6 one-shot), sit_idle(4@4), lick_paw(6@6), look_camera(2: open/blink), lie_down(3@4 one-shot), sleep(4@2 curled ball). see state_fps.",
+ "state_fps": {
+  "walk": 10,
+  "sit_down": 6,
+  "sit_idle": 4,
+  "lick_paw": 6,
+  "look_camera": 1,
+  "lie_down": 4,
+  "sleep": 2
+ },
+ "state_loop": {
+  "walk": true,
+  "sit_down": false,
+  "sit_idle": true,
+  "lick_paw": true,
+  "look_camera": false,
+  "lie_down": false,
+  "sleep": true
+ }
+}

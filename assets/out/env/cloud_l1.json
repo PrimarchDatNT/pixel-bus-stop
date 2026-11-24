@@ -1,0 +1,19 @@
+{
+ "name": "cloud_l1",
+ "group": "env",
+ "frameW": 120,
+ "frameH": 48,
+ "frames": 1,
+ "fps": null,
+ "anchor": [
+  0,
+  0
+ ],
+ "states": {
+  "default": [
+   0
+  ]
+ },
+ "loop": true,
+ "notes": "large fair-weather cloud. Top-left anchor; compositor scrolls horizontally in the sky layer. No opacity baked."
+}

@@ -1,0 +1,30 @@
+{
+ "name": "fw_peony_red",
+ "group": "seasonal",
+ "frameW": 64,
+ "frameH": 64,
+ "frames": 12,
+ "fps": 12,
+ "anchor": [
+  32,
+  32
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ]
+ },
+ "loop": false,
+ "notes": "Spherical burst red, 64x64, 12 frames @12fps (flash, expand, droop, twinkle out), plays once; anchor = burst centre. No glow baked (compositor blooms). Dong night."
+}

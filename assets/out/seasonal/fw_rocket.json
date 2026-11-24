@@ -1,0 +1,22 @@
+{
+ "name": "fw_rocket",
+ "group": "seasonal",
+ "frameW": 3,
+ "frameH": 12,
+ "frames": 4,
+ "fps": 12,
+ "anchor": [
+  1,
+  0
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": false,
+ "notes": "Rising rocket head + fading trail, 4 frames, play looped while moving up; anchor = head (tip). Dong Giao thua."
+}

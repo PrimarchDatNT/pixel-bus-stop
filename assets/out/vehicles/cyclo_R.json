@@ -1,0 +1,22 @@
+{
+ "name": "cyclo_R",
+ "group": "vehicles",
+ "frameW": 64,
+ "frameH": 34,
+ "frames": 4,
+ "fps": 8,
+ "anchor": [
+  32,
+  33
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "Xich lo: passenger carriage in front, driver pedalling behind; 4-frame pedal loop @8fps; facing R."
+}

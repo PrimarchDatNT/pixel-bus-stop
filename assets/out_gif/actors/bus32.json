@@ -1,0 +1,27 @@
+{
+ "name": "bus32",
+ "group": "actors",
+ "frameW": 148,
+ "frameH": 58,
+ "frames": 4,
+ "fps": 12,
+ "anchor": [
+  0,
+  57
+ ],
+ "states": {
+  "drive": [
+   0,
+   1,
+   2
+  ],
+  "idle": [
+   0,
+   0,
+   3,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "bản 6c toy-bus style; front = left edge; anchor = front-bottom (tyre contact row). drive right->left"
+}

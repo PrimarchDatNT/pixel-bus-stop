@@ -1,0 +1,22 @@
+{
+ "name": "leaf_orange",
+ "group": "seasonal",
+ "frameW": 5,
+ "frameH": 5,
+ "frames": 4,
+ "fps": 8,
+ "anchor": [
+  2,
+  2
+ ],
+ "states": {
+  "default": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "loop": true,
+ "notes": "Tumbling leaf, orange. Thu."
+}
